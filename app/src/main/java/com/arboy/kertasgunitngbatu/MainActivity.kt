@@ -114,7 +114,7 @@ class MainActivity : AppCompatActivity() {
         playAgainBtn.setOnClickListener { resetGame() }
 
         btnEn.setOnClickListener { setAppLocale("en") }
-        btnId.setOnClickListener { setAppLocale("in") }
+        btnId.setOnClickListener { setAppLocale("id") }
         btnZh.setOnClickListener { setAppLocale("zh") }
     }
 
@@ -300,7 +300,7 @@ class MainActivity : AppCompatActivity() {
         val com = getString(R.string.com)
         scorePlayer.text = "$player  ${scoreState.playerWins}"
         scoreCom.text = "${scoreState.comWins}  $com"
-        roundLabel.text = getString(R.string.round_of, scoreState.round + 1)
+        roundLabel.text = getString(R.string.round_of, minOf(scoreState.round + 1, 5))
         roundProgress.progress = scoreState.round
         resultText.text = getString(R.string.vs)
         resultText.setTextColor(androidx.core.content.ContextCompat.getColor(this, R.color.text_primary))
@@ -365,10 +365,10 @@ class MainActivity : AppCompatActivity() {
 
     override fun attachBaseContext(newBase: Context) {
         val prefs = newBase.getSharedPreferences("settings", Context.MODE_PRIVATE)
-        val lang = prefs.getString("language", "in") ?: "in"
+        val lang = prefs.getString("language", "id") ?: "id"
         val locale = Locale(lang)
         Locale.setDefault(locale)
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             val config = Configuration(newBase.resources.configuration)
             config.setLocale(locale)
             super.attachBaseContext(newBase.createConfigurationContext(config))
