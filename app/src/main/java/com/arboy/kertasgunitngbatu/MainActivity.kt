@@ -123,6 +123,8 @@ class MainActivity : AppCompatActivity() {
         if (currentState is GameState.GameOver) return
         if (scoreState.round >= 5) return
 
+        isAnimating = true
+
         currentState = GameState.PlayerSelected(choice)
         playBounceAnimation(
             when (choice) {
@@ -142,7 +144,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun revealComChoice(comChoice: Choice) {
-        isAnimating = true
         ivComChoice.rotationY = 0f
         ivComChoice.animate()
             .rotationY(360f)
@@ -181,7 +182,6 @@ class MainActivity : AppCompatActivity() {
                 resultText.text = getString(R.string.lose)
             }
             GameResult.DRAW -> {
-                scoreState = scoreState.copy(round = scoreState.round + 1)
                 resultText.setTextColor(androidx.core.content.ContextCompat.getColor(this, R.color.draw_gold))
                 resultText.text = getString(R.string.draw)
             }
@@ -368,12 +368,15 @@ class MainActivity : AppCompatActivity() {
         val lang = prefs.getString("language", "in") ?: "in"
         val locale = Locale(lang)
         Locale.setDefault(locale)
-        val config = Configuration(newBase.resources.configuration)
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            val config = Configuration(newBase.resources.configuration)
             config.setLocale(locale)
+            super.attachBaseContext(newBase.createConfigurationContext(config))
         } else {
+            val config = Configuration(newBase.resources.configuration)
             config.locale = locale
+            newBase.resources.updateConfiguration(config, newBase.resources.displayMetrics)
+            super.attachBaseContext(newBase)
         }
-        super.attachBaseContext(newBase.createConfigurationContext(config))
     }
 }
