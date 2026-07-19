@@ -1,20 +1,44 @@
-# KertasGuntingBatu
-Kertas Gunting Batu ( KGB ) is game rock Paper Scissors, this actually my task at Binar for Challange Chapter 4 Android Wave 17
+# ✂️ KertasGuntingBatu (Rock Paper Scissors)
 
+Rock Paper Scissors game with a playful dark theme, 3-language support, and best-of-5 scoring system.
 
-# Flowchart App
-https://app.diagrams.net/#G1yzCxNly1Vab4jNB8xTAblyiH__TsoU6g
-![image](https://user-images.githubusercontent.com/74137303/214002511-b753a195-997e-4156-b401-e08428479085.png)
+## Features
 
+- 🎮 **Best of 5** — First to 3 wins takes the match
+- 🌍 **3 Languages** — English, Indonesia, 中文 (Mandarin)
+- 🎬 **Smooth Animations** — Bounce on tap, flip reveal, slide results, pop score
+- 🏆 **Game Over Overlay** — Win/Lose/Draw with final score
+- 🌙 **Dark Theme** — Gradient background with vibrant accents
 
-# Task from Binar
-https://drive.google.com/file/d/1RyjGEw9WuveXT1_9hei7BxsnP2NlPiTC/view?usp=share_link
+## Screenshots
 
+| Game Arena | Result | Game Over |
+|---|---|---|
+| *(screenshot needed)* | *(screenshot needed)* | *(screenshot needed)* |
 
-# Result
-![image](https://user-images.githubusercontent.com/74137303/214002350-43d94e0c-8fe0-4e83-ba9d-e11c7697f1f7.png)
+## Tech Stack
 
+- **Language:** Kotlin 1.7.20
+- **Min SDK:** 21
+- **Target SDK:** 33
+- **Architecture:** Single Activity, XML layouts, sealed class state machine
+- **Dependencies:** AndroidX AppCompat, Material, ConstraintLayout
 
-File APK : 
+## How to Build
 
-https://drive.google.com/file/d/1haBwjSiqp0GJwDqEPv-FE01Z_oCSslmu/view?usp=share_link
+```bash
+./gradlew assembleDebug
+```
+
+## How to Play
+
+1. Select **Rock**, **Paper**, or **Scissors**
+2. Watch the COM choice reveal with a flip animation
+3. See the result (Win/Lose/Draw) with score update
+4. First to **3 wins** wins the game
+5. If tied after 5 rounds, higher score wins
+6. Tap **Play Again** to restart
+
+## Language
+
+Tap **EN** / **ID** / **中文** in the top-right corner to switch languages. Your preference is saved.
