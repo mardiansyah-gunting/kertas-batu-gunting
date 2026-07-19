@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">KGB Game</string>
+    <string name="player">Player</string>
+    <string name="com">COM</string>
+    <string name="rock">Rock</string>
+    <string name="paper">Paper</string>
+    <string name="scissors">Scissors</string>
+    <string name="vs">VS</string>
+    <string name="win">You Win!</string>
+    <string name="lose">You Lose!</string>
+    <string name="draw">Draw!</string>
+    <string name="round_of">Round %d of 5</string>
+    <string name="score">Score</string>
+    <string name="play_again">Play Again</string>
+    <string name="game_over">Game Over</string>
+    <string name="en">EN</string>
+    <string name="id">ID</string>
+    <string name="zh">中文</string>
+    <string name="choose_move">Choose your move!</string>
+</resources>

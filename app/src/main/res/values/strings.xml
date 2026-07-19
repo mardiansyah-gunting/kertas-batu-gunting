@@ -1,10 +1,20 @@
 <resources>
-    <string name="app_name">KGB ( Kertas Gunting Batu )</string>
-    <string name="suit_game">Kertas Batu Gunting</string>
-    <string name="pemain_1">Pemain 1</string>
+    <string name="app_name">KGB (Kertas Gunting Batu)</string>
+    <string name="player">Pemain</string>
     <string name="com">COM</string>
-    <string name="batu">Batu</string>
-    <string name="gunting">Gunting</string>
+    <string name="rock">Batu</string>
+    <string name="paper">Kertas</string>
+    <string name="scissors">Gunting</string>
     <string name="vs">VS</string>
-    <string name="kertas">Kertas</string>
+    <string name="win">Kamu Menang!</string>
+    <string name="lose">Kamu Kalah!</string>
+    <string name="draw">Seri!</string>
+    <string name="round_of">Ronde %d dari 5</string>
+    <string name="score">Skor</string>
+    <string name="play_again">Main Lagi</string>
+    <string name="game_over">Game Over</string>
+    <string name="en">EN</string>
+    <string name="id">ID</string>
+    <string name="zh">中文</string>
+    <string name="choose_move">Pilih gerakanmu!</string>
 </resources>

@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">石头剪刀布</string>
+    <string name="player">玩家</string>
+    <string name="com">电脑</string>
+    <string name="rock">石头</string>
+    <string name="paper">布</string>
+    <string name="scissors">剪刀</string>
+    <string name="vs">VS</string>
+    <string name="win">你赢了！</string>
+    <string name="lose">你输了！</string>
+    <string name="draw">平局！</string>
+    <string name="round_of">第%d轮共5轮</string>
+    <string name="score">分数</string>
+    <string name="play_again">再玩一次</string>
+    <string name="game_over">游戏结束</string>
+    <string name="en">EN</string>
+    <string name="id">ID</string>
+    <string name="zh">中文</string>
+    <string name="choose_move">选择你的手势！</string>
+</resources>
